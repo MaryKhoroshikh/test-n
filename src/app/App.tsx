@@ -1,10 +1,11 @@
-import './App.css'
-import ButtonCTA from '../ui/buttonCTA/buttonCTA'
+import styles from './App.module.css';
+import ButtonCTA from '../ui/buttonCTA/buttonCTA';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import Section from '../ui/section/section';
+import dataProblems from '../assets/data.json';
+import CardList from '../ui/cardList/cardList';
 
 function App() {
-
   // const hundleForm = () => {
   //   console.log('submit form');
   // };
@@ -14,7 +15,7 @@ function App() {
   };
 
   return (
-    <>
+    <div className={styles.app}>
       <Section 
         title='Подготовьте вашу команду к эпохе ИИ'
         type='main'
@@ -33,7 +34,12 @@ function App() {
           }}
         /> 
       </Section>
-    </>
+      <Section 
+        title='Ключевые проблемы развития бизнеса'
+      >
+        <CardList cards={dataProblems} />
+      </Section>
+    </div>
   )
 }
 

@@ -1,0 +1,15 @@
+.cardList {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    place-items: center;
+    gap: 20px;
+    width: 100%;
+}
+
+@media (min-width: 768px) {
+  .cardList {
+    flex-direction: row;
+    justify-content: center;
+  }
+}

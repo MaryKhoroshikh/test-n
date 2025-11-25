@@ -14,7 +14,7 @@ const Section: React.FC<SectionProps> = ({ title, type = 'ext', text, children }
 
   return (
     <section className={styles.section}>
-      <HeadingTag className={styles.title}>{title}</HeadingTag>
+      <HeadingTag className={`${type === 'main' ? styles.main : ''} ${styles.title}`}>{title}</HeadingTag>
       {text && <p className={styles.text}>{text}</p>}
       {children && <div className={styles.content}>{children}</div>}
     </section>

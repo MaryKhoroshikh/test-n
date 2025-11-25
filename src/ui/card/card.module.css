@@ -1,0 +1,104 @@
+.card {
+  position: relative;
+  width: 100%;
+  max-width: 400px;
+  min-height: 200px;
+  border: 1px solid var(--text-color);
+  border-radius: 8px;
+  overflow: hidden;
+  background-color: var(--font-secondary);
+  box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  transform-style: preserve-3d; /* Сохраняем 3D-трансформации для дочерних элементов */
+  transition: transform 0.5s ease-in-out; /* Плавный переход для анимации */
+  margin: 0;
+}
+
+.flipped {
+  transform: rotateY(180deg); /* Поворачиваем карточку на 180 градусов по оси Y */
+  transition: transform 0.5s ease-in-out; /* Плавный переход для анимации */
+}
+
+.front, .back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.flipped .front,
+.flipped .back {
+  backface-visibility: hidden; /* Скрываем обратную сторону элемента при повороте */
+}
+
+.flipped .back {
+  backface-visibility: visible;
+}
+
+.front {
+  transform: translateZ(10px); /* Слегка выдвигаем фронтальную сторону вперёд */
+}
+
+.back {
+  transform: rotateY(180deg); /* Поворачиваем обратную сторону на 180 градусов  */
+  background-color: var(--background-color); /* Можно задать другой цвет фона для обратной стороны */
+  backface-visibility: hidden; /* Скрываем обратную сторону элемента при повороте */
+}
+
+.back::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: var(--accent-color);
+  opacity: 0.2;
+  z-index: -1;
+}
+
+.title {
+  font-family: var(--font-primary);
+  font-size: 1.2rem;
+  color: var(--text-color);
+  padding-inline: 10px;
+  font-weight: 600;
+  letter-spacing: 0.02em;
+}
+
+.text {
+  font-family: var(--font-secondary);
+  font-size: 1rem;
+  color: var(--text-color);
+  margin: 0;
+  line-height: 1.2;
+  padding: 5px 10px;
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: 1.4rem;
+    padding-inline: 20px;
+  }
+  .text {
+    font-size: 1.2rem;
+  }
+  .card {
+    height: 300px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .title {
+    font-size: 1.6rem;
+    padding-inline: 25px;
+  }
+  .text {
+    font-size: 1.4rem;
+  }
+  .card {
+    height: 400px;
+  }
+}
