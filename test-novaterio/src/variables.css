@@ -1,0 +1,10 @@
+:root {
+  --primary-color: #0a58ca; /* Глубокий синий цвет */
+  --secondary-color: #343a40; /* Тёмно-серый цвет */
+  --accent-color: #5effff; /* Неоново-голубой акцент */
+  --text-color: #fff; /* Цвет текста */
+  --accent-text-color: #1a1a71; /* Цвет текста */
+  --background-color: #f5f5f5; /* Светлый фон */
+  --font-primary: 'Inter', sans-serif;
+  --font-secondary: 'Manrope', sans-serif;
+}
