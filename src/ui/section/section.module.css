@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Manrope:wght@400;700&display=swap');
+
+.section {
+  background-color: var(--background-color);
+  padding: 1.5rem;
+  margin-bottom: 2rem;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.title {
+  font-family: var(--font-primary);
+  font-size: 2rem;
+  color: var(--accent-text-color);
+  margin-bottom: 1rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  position: relative;
+}
+
+.text {
+  font-family: var(--font-secondary);
+  font-size: 1rem;
+  color: var(--accent-text-color);
+  margin-bottom: 1.5rem;
+  line-height: 1.6;
+}
+
+.content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.title::before {
+  content: '';
+  display: block;
+  width: 50px;
+  height: 5px;
+  background-color: var(--accent-color);
+  margin-bottom: 0.5rem;
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+}
+
+@media (min-width: 768px) {
+  section {
+    padding: 2rem;
+  }
+
+  .title {
+    font-size: 2.5rem;
+  }
+
+  .text {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1200px) {
+  section {
+    max-width: 1200px;
+  }
+
+  .title {
+    font-size: 3rem;
+  }
+
+  .text {
+    font-size: 1.4rem;
+  }
+}
