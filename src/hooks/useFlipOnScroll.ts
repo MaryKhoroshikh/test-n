@@ -15,9 +15,9 @@ export const useFlipOnScroll = (
       const cardRect = ref.current?.getBoundingClientRect();
       if (!cardRect) return;
       
-      const isBelowCenter = cardRect.top <= window.innerHeight / 3;
+      const isUpperCenter = cardRect.bottom <= window.innerHeight / 2;
 
-      if (isBelowCenter) {
+      if (isUpperCenter) {
         setIsFlipped(true);
       } else {
         setIsFlipped(false);
