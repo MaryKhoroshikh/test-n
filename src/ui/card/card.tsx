@@ -18,7 +18,7 @@ const Card: React.FC<TCard> = ({
   enableFlip = false
 }) => {
   const cardRef = useRef<HTMLDivElement>(null);
-  const isFlipped = useFlipOnScroll(cardRef, 2000, enableFlip);
+  const isFlipped = useFlipOnScroll(cardRef, enableFlip);
 
   
   
@@ -35,9 +35,11 @@ const Card: React.FC<TCard> = ({
                 </div>
             )}
             </div>
-        <div className={styles.back} >
+        { back && (
+          <div className={styles.back} >
             <p className={styles.text}>{back}</p>
-        </div>
+          </div>
+        )}
     </div>
     
   );
