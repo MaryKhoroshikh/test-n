@@ -34,14 +34,13 @@ const Card: React.FC<TCard> = ({
                 {icon}
                 </div>
             )}
-            </div>
+        </div>
         { back && (
           <div className={styles.back} >
             <p className={styles.text}>{back}</p>
           </div>
         )}
     </div>
-    
   );
 };
 

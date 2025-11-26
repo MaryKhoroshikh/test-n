@@ -6,6 +6,8 @@ import dataProblems from '../assets/db/problems.json';
 import dataServices from '../assets/db/services.json';
 import CardList from '../ui/cardList/cardList';
 import learningFormats from '../assets/learningFormats';
+import Reviews from '@/components/reviews/reviews';
+import reviewData from '../assets/db/imgReviews.json';
 
 function App() {
   // const hundleForm = () => {
@@ -50,6 +52,14 @@ function App() {
         title='Форматы обучения'
       >
         <CardList cards={learningFormats} enableFlip={false} />
+      </Section>
+      <Section 
+        title='Отзывы'
+      >
+        <div className={styles.reviewSec}>
+          <Reviews items={reviewData}/>
+        </div>
+        
       </Section>
     </div>
   )

@@ -2,6 +2,7 @@
   --primary-color: #1A487B; /* Глубокий синий цвет, используется для анимации*/
   --secondary-color: #343a40; /* Тёмно-серый цвет */
   --accent-color: #5effff; /* Неоново-голубой акцент */
+  --accent-transparent-color: rgba(94, 255, 255, 0.05);
   --text-color: #1a1a71; /* Цвет текста */
   --accent-text-color: #fff; /* Цвет текста */
   --background-color: #f5f5f5; /* Светлый фон */
