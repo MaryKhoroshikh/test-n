@@ -1,52 +1,28 @@
-import React, { useEffect, useRef, useState, type JSX } from 'react';
+import React, { useRef, type JSX } from 'react';
 import styles from './card.module.css';
+import { useFlipOnScroll } from '../../hooks/useFlipOnScroll';
 
 export type TCard = {
-    title: string,
-    text: string,
-    back?: string,
-    icon?: JSX.Element
-};
-
-export interface CardProps {
   title: string;
   text: string;
   back?: string;
   icon?: JSX.Element;
-}
+  enableFlip?: boolean;
+};
 
-const Card: React.FC<CardProps> = ({ title, text, back, icon }) => {
-  const [isFlipped, setIsFlipped] = useState(false);
+const Card: React.FC<TCard> = ({ 
+  title, 
+  text, 
+  back, 
+  icon,
+  enableFlip = false
+}) => {
   const cardRef = useRef<HTMLDivElement>(null);
+  const isFlipped = useFlipOnScroll(cardRef, 2000, enableFlip);
 
-  useEffect(() => {
-  // Функция, которую нужно выполнить с задержкой
-  const handleScroll = () => {
-    const cardRect = cardRef.current?.getBoundingClientRect();
-    if (cardRect) {
-      // Пример условия: карточка перевернётся, когда её верх будет в центре экрана
-      if (cardRect.top < window.innerHeight / 2 && cardRect.bottom > 0) {
-        setIsFlipped(true);
-      } else {
-        setIsFlipped(false);
-      }
-    }
-  };
-
-  // Устанавливаем задержку в 2 секунды перед запуском handleScroll
-  const timeoutId = setTimeout(() => {
-    // Здесь можно добавить код, который должен выполниться с задержкой
-    window.addEventListener('scroll', handleScroll);
-  }, 2000); // 2000 мс = 2 сек
-
-  // Очищаем таймер и удаляем слушатель событий при размонтировании компонента
-  return () => {
-    clearTimeout(timeoutId);
-    window.removeEventListener('scroll', handleScroll);
-  };
-}, [isFlipped]);
   
-    return (
+  
+  return (
     <div ref={cardRef} className={`${styles.card} ${isFlipped ? styles.flipped : ''}`}>
         <div className={`${styles.front}`}>
             <h3 className={styles.title}>{title}</h3>

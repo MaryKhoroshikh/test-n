@@ -5,9 +5,10 @@ import styles from './cardList.module.css';
 
 interface CardListProps {
   cards: TCard[];
+  enableFlip: boolean;
 }
 
-const CardList: React.FC<CardListProps> = ({ cards }) => {
+const CardList: React.FC<CardListProps> = ({ cards, enableFlip }) => {
   return (
     <div
       className={styles.cardList}
@@ -19,6 +20,7 @@ const CardList: React.FC<CardListProps> = ({ cards }) => {
           text={card.text}
           back={card.back}
           icon={card.icon}
+          enableFlip={enableFlip}
         />
       ))}
     </div>

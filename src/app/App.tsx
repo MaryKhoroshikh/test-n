@@ -37,7 +37,7 @@ function App() {
       <Section 
         title='Ключевые проблемы развития бизнеса'
       >
-        <CardList cards={dataProblems} />
+        <CardList cards={dataProblems} enableFlip={true}/>
       </Section>
     </div>
   )
