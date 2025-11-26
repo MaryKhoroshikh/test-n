@@ -27,8 +27,7 @@
   flex-direction: column;
   gap: 10px;
   padding: 10px;
-  align-items: center;
-  justify-content: center;
+  place-content: center;
 }
 
 .flipped .front,
@@ -98,6 +97,10 @@
   .card {
     min-height: 300px;
   }
+  .front, .back {
+    gap: 20px;
+    padding: 10px;
+  }
 }
 
 @media (min-width: 1200px) {
@@ -110,5 +113,9 @@
   }
   .card {
     min-height: 400px;
+  }
+  .front, .back {
+    gap: 30px;
+    padding: 15px;
   }
 }
