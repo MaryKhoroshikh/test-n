@@ -23,7 +23,7 @@ const Card: React.FC<TCard> = ({
   
   
   return (
-    <div ref={cardRef} className={`${styles.card} ${isFlipped ? styles.flipped : ''}`}>
+    <div ref={cardRef} className={`${styles.card} ${isFlipped && enableFlip ? styles.flipped : ''}`}>
         <div className={`${styles.front}`}>
             <h3 className={styles.title}>{title}</h3>
             <p className={styles.text}>{text}</p>

@@ -2,7 +2,8 @@ import styles from './App.module.css';
 import ButtonCTA from '../ui/buttonCTA/buttonCTA';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import Section from '../ui/section/section';
-import dataProblems from '../assets/data.json';
+import dataProblems from '../assets/db/problems.json';
+import dataServices from '../assets/db/services.json';
 import CardList from '../ui/cardList/cardList';
 
 function App() {
@@ -38,6 +39,11 @@ function App() {
         title='Ключевые проблемы развития бизнеса'
       >
         <CardList cards={dataProblems} enableFlip={true}/>
+      </Section>
+      <Section 
+        title='Наши преимущества'
+      >
+        <CardList cards={dataServices} enableFlip={false}/>
       </Section>
     </div>
   )
