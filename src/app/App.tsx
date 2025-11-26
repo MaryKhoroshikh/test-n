@@ -5,6 +5,7 @@ import Section from '../ui/section/section';
 import dataProblems from '../assets/db/problems.json';
 import dataServices from '../assets/db/services.json';
 import CardList from '../ui/cardList/cardList';
+import learningFormats from '../assets/learningFormats';
 
 function App() {
   // const hundleForm = () => {
@@ -44,6 +45,11 @@ function App() {
         title='Наши преимущества'
       >
         <CardList cards={dataServices} enableFlip={false}/>
+      </Section>
+      <Section 
+        title='Форматы обучения'
+      >
+        <CardList cards={learningFormats} enableFlip={false} />
       </Section>
     </div>
   )
