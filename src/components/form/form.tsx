@@ -1,5 +1,4 @@
 import {
-  Button,
   Field,
   Fieldset,
   Input,
@@ -10,6 +9,7 @@ import { zodResolver } from '@hookform/resolvers/zod';
 import { toaster } from "../ui/toaster.tsx";
 
 import z from "zod";
+import ButtonCTA from "@/ui/buttonCTA/buttonCTA.tsx";
 
 type FormValues = z.infer<typeof formSchema>;
 
@@ -33,7 +33,8 @@ const Form = () => {
   const {
     register,
     handleSubmit,
-    formState: { errors, isSubmitting },
+    formState: { errors },
+    reset,
   } = useForm<FormValues>({
     resolver: zodResolver(formSchema),
     mode: 'onChange'
@@ -58,6 +59,7 @@ const Form = () => {
           closable: true,
           type: "success"
         });
+        reset(); 
       } else {
         throw new Error('Ошибка отправки');
       }
@@ -135,20 +137,13 @@ const Form = () => {
         </Field.Root>
       </Fieldset.Content>
 
-      <Button 
-        type="submit" 
-        alignSelf="center" 
-        loading={isSubmitting}
-        loadingText="Отправляю..."
-        onClick={handleSubmit(onSubmit)}
-        disabled={!!errors.company || !!errors.phone || !!errors.email || !!errors.name}
-        color='var(--accent-text-color)'
-        background='var(--primary-color)'
-        size="lg"
-      >
-        Получить консультацию
-      </Button>
-    
+        <ButtonCTA 
+            onClick={handleSubmit(onSubmit)} 
+            disabled={!!errors.company || !!errors.phone || !!errors.email || !!errors.name}
+            type="submit"
+        >
+            Получить консультацию
+        </ButtonCTA>
     </Fieldset.Root>
   )
 };

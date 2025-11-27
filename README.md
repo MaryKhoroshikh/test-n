@@ -37,3 +37,8 @@ test-n/
 └── vite.config.js
 
 ## Установка и запуск
+
+git clone [ссылка на репозиторий]
+npm install или yarn install
+npm run dev или yarn dev
+npm run build или yarn build
