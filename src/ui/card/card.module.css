@@ -7,7 +7,7 @@
   border: 1px solid var(--text-color);
   border-radius: 8px;
   overflow: hidden;
-  background-color: var(--font-secondary);
+  background-color: var(--background-color);
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
   transform-style: preserve-3d; /* Сохраняем 3D-трансформации для дочерних элементов */
   transition: transform 0.5s ease-in-out; /* Плавный переход для анимации */
@@ -46,7 +46,7 @@
 
 .back {
   transform: rotateY(180deg); /* Поворачиваем обратную сторону на 180 градусов  */
-  background-color: var(--background-color); /* Можно задать другой цвет фона для обратной стороны */
+  background-color: var(--accent-color); /* Можно задать другой цвет фона для обратной стороны */
   backface-visibility: hidden; /* Скрываем обратную сторону элемента при повороте */
 }
 

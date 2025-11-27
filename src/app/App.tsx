@@ -8,6 +8,8 @@ import CardList from '../ui/cardList/cardList';
 import learningFormats from '../assets/learningFormats';
 import Reviews from '@/components/reviews/reviews';
 import reviewData from '../assets/db/imgReviews.json';
+import faqData from '../assets/db/faq.json';
+import FAQ from '@/components/faq/faq';
 
 function App() {
   // const hundleForm = () => {
@@ -59,7 +61,13 @@ function App() {
         <div className={styles.reviewSec}>
           <Reviews items={reviewData}/>
         </div>
-        
+      </Section>
+      <Section 
+        title='FAQ'
+      >
+        <div className={styles.reviewSec}>
+          <FAQ items={faqData}/>
+        </div>
       </Section>
     </div>
   )

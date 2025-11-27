@@ -33,7 +33,14 @@ const Reviews : FC<ReviewsProps> = ({items}) => {
                     objectFit="contain"
                     />
                     : <AspectRatio bg="var(--accent-transparent-color)" ratio={16 / 9}>
-                        <Center fontSize="x3">Компании уже готовятся к ИИ-трансформации...</Center>
+                        <Center 
+                          color="var(--text-color)" 
+                          fontFamily="var(--font-primary)"
+                          flex="1"
+                          fontSize="1.2rem"
+                        >
+                          Компании уже готовятся к ИИ-трансформации...
+                        </Center>
                     </AspectRatio>
                 }
               </AspectRatio>
