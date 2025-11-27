@@ -12,12 +12,16 @@ import faqData from '../assets/db/faq.json';
 import FAQ from '@/components/faq/faq';
 
 function App() {
-  // const hundleForm = () => {
-  //   console.log('submit form');
-  // };
+  const hundleForm = () => {
+    console.log('submit form');
+  };
 
   const hundleGuideToForm = () => {
     console.log('guite to form');
+    const targetElement = document.getElementById('action');
+    if (targetElement) {
+      targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
   };
 
   return (
@@ -67,6 +71,14 @@ function App() {
       >
         <div className={styles.reviewSec}>
           <FAQ items={faqData}/>
+        </div>
+      </Section>
+      <Section 
+        title='Хотите начать?'
+      >
+        <div id="action">
+          <p>Заполните форму — и мы оперативно свяжемся с вами.</p>
+          <ButtonCTA onClick={hundleForm}/>
         </div>
       </Section>
     </div>
