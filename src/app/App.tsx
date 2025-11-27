@@ -10,6 +10,8 @@ import Reviews from '@/components/reviews/reviews';
 import reviewData from '../assets/db/imgReviews.json';
 import faqData from '../assets/db/faq.json';
 import FAQ from '@/components/faq/faq';
+import Form from '@/components/form/form';
+import Footer from '@/components/footer/footer';
 
 function App() {
   const hundleForm = () => {
@@ -17,7 +19,6 @@ function App() {
   };
 
   const hundleGuideToForm = () => {
-    console.log('guite to form');
     const targetElement = document.getElementById('action');
     if (targetElement) {
       targetElement.scrollIntoView({ behavior: 'smooth', block: 'start' });
@@ -78,9 +79,11 @@ function App() {
       >
         <div id="action">
           <p>Заполните форму — и мы оперативно свяжемся с вами.</p>
+          <Form />
           <ButtonCTA onClick={hundleForm}/>
         </div>
       </Section>
+      <Footer />
     </div>
   )
 }
