@@ -1,7 +1,6 @@
 import { type JSX } from 'react';
 import dataLearningFormats from '../assets/db/formats.json';
 
-// Импортируем иконки (пример с react-icons)
 import { 
   FiMonitor,
   FiUsers,
@@ -11,7 +10,6 @@ import {
 } from 'react-icons/fi';
 import type { TCard } from '../ui/card/card';
 
-// Маппинг иконок на основе заголовка
 const getIconByTitle = (title: string): JSX.Element | undefined => {
   switch (title) {
     case 'Онлайн‑обучение':
@@ -29,7 +27,6 @@ const getIconByTitle = (title: string): JSX.Element | undefined => {
   }
 };
 
-// Преобразуем JSON‑данные в массив TCard
 const learningFormats: TCard[] = dataLearningFormats.map(item => ({
   title: item.title,
   text: item.text,

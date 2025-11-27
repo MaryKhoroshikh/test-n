@@ -1,14 +1,14 @@
 import styles from './App.module.css';
-import ButtonCTA from '../ui/buttonCTA/buttonCTA';
+import ButtonCTA from '../../ui/buttonCTA/buttonCTA';
 import { DotLottieReact } from '@lottiefiles/dotlottie-react';
-import Section from '../ui/section/section';
-import dataProblems from '../assets/db/problems.json';
-import dataServices from '../assets/db/services.json';
-import CardList from '../ui/cardList/cardList';
-import learningFormats from '../assets/learningFormats';
+import Section from '../../ui/section/section';
+import dataProblems from '../../assets/db/problems.json';
+import dataServices from '../../assets/db/services.json';
+import CardList from '../../ui/cardList/cardList';
+import learningFormats from '../../assets/learningFormats';
 import Reviews from '@/components/reviews/reviews';
-import reviewData from '../assets/db/imgReviews.json';
-import faqData from '../assets/db/faq.json';
+import reviewData from '../../assets/db/imgReviews.json';
+import faqData from '../../assets/db/faq.json';
 import FAQ from '@/components/faq/faq';
 import Form from '@/components/form/form';
 import Footer from '@/components/footer/footer';
@@ -74,7 +74,7 @@ function App() {
       <Section 
         title='Хотите начать?'
       >
-        <div id="action">
+        <div id="action" className={styles.formSec}>
           <Form />
         </div>
       </Section>

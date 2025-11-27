@@ -36,9 +36,10 @@ const Form = () => {
     formState: { errors, isSubmitting },
   } = useForm<FormValues>({
     resolver: zodResolver(formSchema),
+    mode: 'onChange'
   });
 
-  // 3. Отправка данных (Formspree)
+  // Отправка данных Formspree
   const onSubmit = async (data: FormValues) => {
     try {
       const response = await fetch('https://formspree.io/f/xeobknnq', {
@@ -74,7 +75,6 @@ const Form = () => {
     return (
     <Fieldset.Root size="lg" maxW="md" invalid>
       <Stack>
-        <Fieldset.Legend>Contact details</Fieldset.Legend>
         <Fieldset.HelperText>
           Заполните форму — и мы оперативно свяжемся с вами
         </Fieldset.HelperText>
@@ -82,7 +82,11 @@ const Form = () => {
 
       <Fieldset.Content>
         <Field.Root invalid={!!errors.name} required>
-          <Field.Label>Имя</Field.Label>
+          <Field.Label 
+            color="var(--text-color)" 
+            fontFamily="var(--font-primary)"
+            fontSize="1rem"
+          >Имя</Field.Label>
           <Input 
             {...register('name')}
             placeholder="Ваше имя"
@@ -91,27 +95,39 @@ const Form = () => {
         </Field.Root>
 
         <Field.Root invalid={!!errors.email} required>
-          <Field.Label>Email</Field.Label>
+          <Field.Label
+            color="var(--text-color)" 
+            fontFamily="var(--font-primary)"
+            fontSize="1rem"
+          >Email</Field.Label>
           <Input 
             {...register('email')}
             type="email"
             placeholder="example@domain.com"
-            name="email" />
+          />
           <Field.ErrorText>{errors.email?.message}</Field.ErrorText>
         </Field.Root>
 
         <Field.Root invalid={!!errors.phone} required>
-          <Field.Label>Телефон</Field.Label>
+          <Field.Label
+            color="var(--text-color)" 
+            fontFamily="var(--font-primary)"
+            fontSize="1rem"
+          >Телефон</Field.Label>
           <Input 
             {...register('phone')}
             placeholder="+7 XXX XXX XX XX"
-            name="phone"
-            type="number"/>
+            
+          />
           <Field.ErrorText>{errors.phone?.message}</Field.ErrorText>
         </Field.Root>
 
         <Field.Root invalid={!!errors.company}>
-          <Field.Label>Компания</Field.Label>
+          <Field.Label
+            color="var(--text-color)" 
+            fontFamily="var(--font-primary)"
+            fontSize="1rem"
+          >Компания</Field.Label>
           <Input 
             {...register('company')}
             placeholder="Название компании"/>
@@ -126,9 +142,13 @@ const Form = () => {
         loadingText="Отправляю..."
         onClick={handleSubmit(onSubmit)}
         disabled={!!errors.company || !!errors.phone || !!errors.email || !!errors.name}
+        color='var(--accent-text-color)'
+        background='var(--primary-color)'
+        size="lg"
       >
         Получить консультацию
       </Button>
+    
     </Fieldset.Root>
   )
 };
