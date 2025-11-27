@@ -18,7 +18,10 @@
 
 ## Установка и запуск
 
-git clone [ссылка на репозиторий]
-npm install или yarn install
-npm run dev или yarn dev
-npm run build или yarn build
+git clone https://github.com/MaryKhoroshikh/test-n.git](https://github.com/MaryKhoroshikh/test-n.git
+
+npm install (yarn install )
+
+npm run dev (yarn dev)
+
+npm run build (yarn build)
