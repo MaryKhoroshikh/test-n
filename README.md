@@ -18,7 +18,7 @@
 
 ## Установка и запуск
 
-git clone https://github.com/MaryKhoroshikh/test-n.git](https://github.com/MaryKhoroshikh/test-n.git
+git clone https://github.com/MaryKhoroshikh/test-n.git
 
 npm install (yarn install )
 
