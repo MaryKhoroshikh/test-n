@@ -20,7 +20,7 @@
 
 .button:hover {
   background-color: var(--accent-color);
-  color: var(--accent-text-color);
+  color: var(--text-color);
   transition: color 0.5s ease;
   transition: background-color 0.5s ease;
 }

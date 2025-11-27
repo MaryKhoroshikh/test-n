@@ -29,6 +29,7 @@ const Reviews : FC<ReviewsProps> = ({items}) => {
                 {review.imgSrc !== ""
                     ? <Image
                     src={review.imgSrc}
+                    loading="lazy"
                     alt={`Product ${index + 1}`}
                     objectFit="contain"
                     />
