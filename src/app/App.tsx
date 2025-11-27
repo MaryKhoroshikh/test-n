@@ -14,9 +14,6 @@ import Form from '@/components/form/form';
 import Footer from '@/components/footer/footer';
 
 function App() {
-  const hundleForm = () => {
-    console.log('submit form');
-  };
 
   const hundleGuideToForm = () => {
     const targetElement = document.getElementById('action');
@@ -78,9 +75,7 @@ function App() {
         title='Хотите начать?'
       >
         <div id="action">
-          <p>Заполните форму — и мы оперативно свяжемся с вами.</p>
           <Form />
-          <ButtonCTA onClick={hundleForm}/>
         </div>
       </Section>
       <Footer />
