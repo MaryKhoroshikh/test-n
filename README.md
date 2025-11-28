@@ -2,7 +2,7 @@
 
 ## Описание
 
-Доступен по ссылке: [https://test-for-novaterio-lj38bqant-marys-projects-3d8079ac.vercel.app/](https://test-for-novaterio-lj38bqant-marys-projects-3d8079ac.vercel.app/)
+Доступен по ссылке: [https://test-for-novaterio.vercel.app/](https://test-for-novaterio.vercel.app/)
 
 Современный, адаптивный, быстро загружаемый лендинг для B2B-услуги: **обучение сотрудников компаний основам и практикам искусственного интеллекта**. Лендинг доносит ценность предложения и побуждает к заявке.
 
