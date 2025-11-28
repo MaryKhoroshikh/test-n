@@ -11,6 +11,7 @@ import faqData from '../../assets/db/faq.json';
 import FAQ from '@/components/faq/faq';
 import Form from '@/components/form/form';
 import Footer from '@/components/footer/footer';
+import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 
 function App() {
 
@@ -33,7 +34,7 @@ function App() {
         <div className={styles.header}>
           <img src='/images/generation_2.webp' className={styles.mainImg} alt='набросок робота карандашом'/>
           <ButtonCTA onClick={hundleGuideToForm}/>
-          {/* <DotLottieReact
+          <DotLottieReact
             src="/public/test.lottie"
             autoplay={true}
             style={{
@@ -41,7 +42,7 @@ function App() {
               width: '100%',
               height: 'auto',
             }}
-          />  */}
+          /> 
         </div>
         
       </Section>
