@@ -1,6 +1,5 @@
 import styles from './App.module.css';
 import ButtonCTA from '../../ui/buttonCTA/buttonCTA';
-import { DotLottieReact } from '@lottiefiles/dotlottie-react';
 import Section from '../../ui/section/section';
 import dataProblems from '../../assets/db/problems.json';
 import dataServices from '../../assets/db/services.json';
@@ -30,16 +29,21 @@ function App() {
         text='Эпоха искусственного интеллекта уже наступила — убедитесь, что ваша команда готова к новым вызовам.
         Узнайте, как развивать ключевые навыки и эффективно внедрять ИИ-технологии в рабочие процессы'
       >
-        <ButtonCTA onClick={hundleGuideToForm}/>
-        <DotLottieReact
-          src="/public/test.lottie"
-          autoplay={true}
-          style={{
-            maxWidth: '200px',
-            width: '100%',
-            height: 'auto',
-          }}
-        /> 
+        
+        <div className={styles.header}>
+          <img src='/public/generation_2.webp' className={styles.mainImg} alt='набросок робота карандашом'/>
+          <ButtonCTA onClick={hundleGuideToForm}/>
+          {/* <DotLottieReact
+            src="/public/test.lottie"
+            autoplay={true}
+            style={{
+              maxWidth: '200px',
+              width: '100%',
+              height: 'auto',
+            }}
+          />  */}
+        </div>
+        
       </Section>
       <Section 
         title='Ключевые проблемы развития бизнеса'

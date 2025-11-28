@@ -34,11 +34,12 @@ export const Footer: React.FC = () => {
           rel="noopener"
           aria-label="Написать в Telegram"
         >
-          <img
+          goodmary1024
+          {/* <img
             src="/public/tg.svg"
             alt="Логотип Telegram"
             className={styles.tgIcon}
-          />
+          /> */}
         </a>
       </div>
     </footer>
