@@ -33,7 +33,6 @@ function App() {
         <ButtonCTA onClick={hundleGuideToForm}/>
         <DotLottieReact
           src="/src/assets/test.lottie"
-          loop={true}
           autoplay={true}
           style={{
             maxWidth: '200px',

@@ -92,7 +92,7 @@ const Form = () => {
           <Input 
             {...register('name')}
             placeholder="Ваше имя"
-            autoFocus/>
+            />
             <Field.ErrorText>{errors.name?.message}</Field.ErrorText>
         </Field.Root>
 
