@@ -31,7 +31,7 @@ function App() {
       >
         
         <div className={styles.header}>
-          <img src='/public/generation_2.webp' className={styles.mainImg} alt='набросок робота карандашом'/>
+          <img src='/images/generation_2.webp' className={styles.mainImg} alt='набросок робота карандашом'/>
           <ButtonCTA onClick={hundleGuideToForm}/>
           {/* <DotLottieReact
             src="/public/test.lottie"
