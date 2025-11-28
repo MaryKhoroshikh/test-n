@@ -32,7 +32,7 @@ function App() {
       >
         <ButtonCTA onClick={hundleGuideToForm}/>
         <DotLottieReact
-          src="/src/assets/test.lottie"
+          src="/public/test.lottie"
           autoplay={true}
           style={{
             maxWidth: '200px',

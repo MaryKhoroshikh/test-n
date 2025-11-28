@@ -35,7 +35,7 @@ export const Footer: React.FC = () => {
           aria-label="Написать в Telegram"
         >
           <img
-            src="/src/assets/img/tg.svg"
+            src="/public/tg.svg"
             alt="Логотип Telegram"
             className={styles.tgIcon}
           />
