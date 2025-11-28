@@ -35,7 +35,7 @@ function App() {
           <img src='/images/generation_2.webp' className={styles.mainImg} alt='набросок робота карандашом'/>
           <ButtonCTA onClick={hundleGuideToForm}/>
           <DotLottieReact
-            src="/public/test.lottie"
+            src="/images/test.lottie"
             autoplay={true}
             style={{
               maxWidth: '200px',
